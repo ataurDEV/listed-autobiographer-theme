@@ -1,5 +1,5 @@
 # sn_listed_sepia_theme
-A sepia theme resembling elementary autobiographer theme
+A sepia theme for Standard Notes Listed resembling elementary autobiographer theme
 
 
 ## To Install Theme
