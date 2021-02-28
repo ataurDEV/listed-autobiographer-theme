@@ -1,23 +1,118 @@
 ---
 metatype: css
 ---
-
 :root {
-  --dimmed-text-color: #d1681d;
-  --dimmed-border-color: #D9C6B1;
-  --background-color: #EDE4DA;
-  --body-text-color: #5C3F27;
-  --post-title-color: #5C3F27;
-  --post-date-color: #5C3F27;
-  --post-text-color: #5C3F27;
-  --page-menu-link-color:  #5C3F27;
-  --header-author-name: #5C3F27;
-  --header-listed-name: #5C3F27;
-  --more-from-border-color: var(--dimmed-border-color);
-  --bio-color: var(--body-text-color);
-  --wordcount-color: var(--body-text-color);
-  --website-color: var(--body-text-color);
-  --twitter-color: var(--body-text-color);
-  --link-color: #C08740;
-  --header-border-color: #D9C6B1;
+--background-color: #EDE4DA;
+--bio-color: var(--dimmed-text-color);
+--body-text-color: #5C3F27;
+--dimmed-border-color: var(--dimmed-text-color);
+--dimmed-text-color: #D49547;Z
+--header-author-name: var(--post-text-color);
+--header-border-color: var(--dimmed-text-color);
+--header-listed-name: var(--post-text-color);
+--link-color: #BA843B6;
+--more-from-border-color: var(--dimmed-text-color);
+--page-menu-link-color: var(--post-text-color);
+/* --post-date-color: var(--dimmed-text-color); */
+--post-text-color: #5C3F27;
+--post-title-color: var(--post-text-color)Z
+--website-color: var(--link-color);Z
+ }
+html {
+overflow-x: hidden;
 }
+body {
+max-width: none;
+padding: 2%;
+}
+div#main-container {
+padding: 0.5rem;
+max-width: 1200px;
+margin: 0 auto;
+}
+/* Use Monospace for Headers and Titles */
+.header-author-info, #page-header, h1, h2, h3 {
+}
+/* Leave a bit of space between sections */
+h3 {
+margin-top: 1rem;
+}
+/* Material Style for Post Containers */
+.post-content {
+background: #E8D9C8;
+padding: 1rem;
+border-radius: 5px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+/* Styles for Inline Code Snippets */
+code, .prettyprint {
+font-family: courier, monospace !important;
+font-size: 0.75rem;
+line-height: 0.75rem;
+color: #a2266c;
+padding: 4px 8px;
+background-color: #f7f7f9;
+border-radius: 3px;
+}
+/* Hide Post Body on Homepage, and Show in Full when Clicked */
+.author-post .post-body {
+display: none;
+}
+/* Specify display for Homepage blog post grid */
+div#author-posts {
+margin-top: 1rem;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+}
+div#author-posts::before {
+content: '';
+width: 0;
+grid-row: 1 / 1;
+grid-column: 1 / 1;
+}
+div#author-posts > *:first-child {
+grid-row: 1 / 1;
+grid-column: 1 / 1;
+}
+div.single-post-show.author-post {
+margin: 0.5rem !important;
+display: inline-block;
+vertical-align: top;
+}
+div.single-post-show.author-post .post-content {
+padding: 0.5rem;
+height: 100%;
+min-height: 140px;
+transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+div.single-post-show.author-post .post-content:hover {
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+div.single-post-show.author-post .post-content .post-date {
+position: absolute;
+bottom: 0;
+color: #7c7c7c;
+}
+div.single-post-show.author-post .post-content .post-title {
+font-weight: normal;
+font-size: 1.00rem;
+}
+.post-preview-body {
+display: none;
+}
+.header-author-info .word-count {
+display: none
+}
+#page-header .left .website-name {
+display: none
+}
+#page-header .left .author-name a {
+font-weight: bold;
+font-size: 1.50rem
+}
+#page-header .left .path-item:before {
+display: none
+}
+#page-header .left .path-item:nth-of-type(3) {
+display: none
+} 
