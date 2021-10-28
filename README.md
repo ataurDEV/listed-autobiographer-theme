@@ -1,5 +1,6 @@
 # sn_listed_sepia_theme
-A sepia theme for Standard Notes Listed resembling elementary autobiographer theme
+A sepia theme for Standard Notes Listed resembling elementary autobiographer theme.
+You can see it for live at https://writing.timapple.com 
 
 
 ## To Install Theme
